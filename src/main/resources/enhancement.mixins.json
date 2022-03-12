@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.darkstudios.enhancement.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  ],
+  "client": [
+    "EnhancementMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

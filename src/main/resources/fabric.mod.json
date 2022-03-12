@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "enhancement",
+  "version": "v0.0.1-DEV",
+
+  "name": "Enhancement",
+  "description": "Enhancement is a 1.18.1 MC Mod that aims to add in new content to Minecraft while maintaining a vanilla feel. For now this is merely a passion project, and not a full scale one. For development updates and if you have questions and comments, here to the discord at <ADD DISCORD LINK HERE (If I don't forget)>",
+  "authors": [
+    "Dark Studios"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/enhancement/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.darkstudios.enhancement.EnhancementMod"
+    ],
+    "client": [
+      "net.darkstudios.enhancement.EnhancementClientMod"
+    ]
+  },
+  "mixins": [
+    "enhancement.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
