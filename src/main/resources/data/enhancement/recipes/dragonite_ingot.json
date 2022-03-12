@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "enhancement:dragonite_block",
+  "ingredients": [
+    {
+      "item": "enhancement:dragonite_block"
+    }
+  ],
+  "result": {
+    "item": "enhancement:dragonite_ingot",
+    "count": 9
+  }
+}
