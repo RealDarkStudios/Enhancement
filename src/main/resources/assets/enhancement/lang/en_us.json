@@ -1,4 +1,20 @@
 {
+  "itemGroup.enhancement.dragonite_age": "Dragonite Age",
+
   "item.enhancement.dragonite_ingot": "Dragonite Ingot",
-  "block.enhancement.dragonite_block": "Dragonite Block"
+  "item.enhancement.dragonite_duststu ": "Dragonite Dust",
+
+  "block.enhancement.dragonite_block": "Dragonite Block",
+  "block.enhancement.dragonite_ore": "Dragonite Ore",
+
+  "item.enhancement.dragonite_axe": "Dragonite Axe",
+  "item.enhancement.dragonite_hoe": "Dragonite Hoe",
+  "item.enhancement.dragonite_pickaxe": "Dragonite Pickaxe",
+  "item.enhancement.dragonite_shovel": "Dragonite Shovel",
+  "item.enhancement.dragonite_sword": "Dragonite Sword",
+
+  "item.enhancement.dragonite_helmet": "Dragonite Helmet",
+  "item.enhancement.dragonite_chestplate": "Dragonite Chestplate",
+  "item.enhancement.dragonite_leggings": "Dragonite Leggings",
+  "item.enhancement.dragonite_boots": "Dragonite Boots"
 }

@@ -4,6 +4,7 @@ import net.darkstudios.enhancement.block.ModBlocks;
 import net.darkstudios.enhancement.item.ModItems;
 import net.darkstudios.enhancement.registries.ModRegistries;
 import net.darkstudios.enhancement.util.ModRenderHelper;
+import net.darkstudios.enhancement.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,5 +24,7 @@ public class EnhancementMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModRegistries.registerStrippables();
+
+		ModWorldGen.generateModWorldGen();
 	}
 }

@@ -9,32 +9,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    /*
-    This is simply a reference to Vanilla's Tool Materials. They can be found at ToolMaterials.class
-
-    WOOD(0, 59, 2.0F, 0.0F, 15, () -> {
-        return Ingredient.fromTag(ItemTags.PLANKS);
-    }),
-    STONE(1, 131, 4.0F, 1.0F, 5, () -> {
-        return Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS);
-    }),
-    IRON(2, 250, 6.0F, 2.0F, 14, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.IRON_INGOT});
-    }),
-    DIAMOND(3, 1561, 8.0F, 3.0F, 10, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.DIAMOND});
-    }),
-    GOLD(0, 32, 12.0F, 0.0F, 22, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_INGOT});
-    }),
-    NETHERITE(4, 2031, 9.0F, 4.0F, 15, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});
-    })
-    */
-
-    DRAGONITE(5, 3500, 10.0F, 5.0F, 18, () -> {
-        return Ingredient.ofItems(ModItems.DRAGONITE_INGOT);
-    });
+    DRAGONITE(5, 3500, 12.0F, 6.0F, 18, () -> Ingredient.ofItems(ModItems.DRAGONITE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

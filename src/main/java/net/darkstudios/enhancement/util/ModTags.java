@@ -10,6 +10,9 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
 
+        public static final Tag.Identified<Block> DRAGONITE_BLOCKS = createCommonTag("dragonite_blocks");
+        public static final Tag.Identified<Block> BASE_STONE_END = createTag("base_stone_end");
+
         //Add Block Tag
         private static Tag.Identified<Block> createTag(String name) {
             return TagFactory.BLOCK.create(new Identifier(EnhancementMod.MOD_ID, name));
@@ -22,6 +25,8 @@ public class ModTags {
     }
 
     public static class Items {
+
+        public static final Tag.Identified<Item> DRAGONITE_INGOTS = createCommonTag("dragonite_ingots");
 
         //Add Item Tag
         private static Tag.Identified<Item> createTag(String name) {

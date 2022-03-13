@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "enhancement:item/dragonite_shovel"
+  }
+}
