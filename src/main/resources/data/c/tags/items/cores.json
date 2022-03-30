@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "enhancement:wooden_core",
+    "enhancement:stone_core",
+    "enhancement:iron_core",
+    "enhancement:diamond_core",
+    "enhancement:netherite_core",
+    "enhancement:dragonite_core"
+  ]
+}

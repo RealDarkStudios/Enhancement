@@ -8,5 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
+    public static final ItemGroup BLOCKS = FabricItemGroupBuilder.build(new Identifier(EnhancementMod.MOD_ID, "blocks"), () -> new ItemStack(ModBlocks.REDWOOD_LOG));
     public static final ItemGroup DRAGONITE_AGE = FabricItemGroupBuilder.build(new Identifier(EnhancementMod.MOD_ID, "dragonite_age"), () -> new ItemStack(ModBlocks.DRAGONITE_BLOCK));
+    public static final ItemGroup COMBAT_AND_TOOLS = FabricItemGroupBuilder.build(new Identifier(EnhancementMod.MOD_ID, "combat_and_tools"), () -> new ItemStack(ModItems.DRAGONITE_SWORD));
+    public static final ItemGroup MISC = FabricItemGroupBuilder.build(new Identifier(EnhancementMod.MOD_ID, "misc"), () -> new ItemStack(ModItems.DRAGONITE_CORE));
 }

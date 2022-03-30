@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "enhancement:redwood_log",
+    "enhancement:redwood_wood",
+    "enhancement:stripped_redwood_log",
+    "enhancement:stripped_redwood_wood"
+  ]
+}

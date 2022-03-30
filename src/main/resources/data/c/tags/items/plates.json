@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "enhancement:iron_plate",
+    "enhancement:diamond_plate",
+    "enhancement:netherite_plate",
+    "enhancement:dragonite_plate"
+  ]
+}

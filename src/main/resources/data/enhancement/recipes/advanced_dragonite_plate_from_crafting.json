@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "enhancement:dragonite_stick",
+  "pattern": [
+    "pp",
+    "pp"
+  ],
+  "key": {
+    "p": {
+      "item": "enhancement:dragonite_plate"
+    }
+  },
+  "result": {
+    "item": "enhancement:advanced_dragonite_plate",
+    "count": 2
+  }
+}

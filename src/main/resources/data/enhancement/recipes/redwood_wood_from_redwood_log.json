@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ll",
+    "ll"
+  ],
+  "key": {
+    "l": {
+      "item": "enhancement:redwood_log"
+    }
+  },
+  "result": {
+    "item": "enhancement:redwood_wood",
+    "count": 3
+  }
+}

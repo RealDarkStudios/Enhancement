@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "enhancement:block/redwood_leaves"
+  }
+}

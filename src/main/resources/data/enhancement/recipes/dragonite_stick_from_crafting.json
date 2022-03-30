@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "enhancement:dragonite_stick",
+  "pattern": [
+    "d",
+    "d"
+  ],
+  "key": {
+    "d": {
+      "item": "enhancement:dragonite_dust"
+    }
+  },
+  "result": {
+    "item": "enhancement:dragonite_stick",
+    "count": 4
+  }
+}

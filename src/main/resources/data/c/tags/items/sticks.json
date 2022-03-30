@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "enhancement:stone_stick",
+    "enhancement:iron_stick",
+    "enhancement:diamond_stick",
+    "enhancement:netherite_stick",
+    "enhancement:dragonite_stick"
+  ]
+}

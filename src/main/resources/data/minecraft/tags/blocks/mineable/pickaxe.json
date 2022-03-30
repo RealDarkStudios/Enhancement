@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "enhancement:dragonite_block",
+    "enhancement:hardened_dragonite_block",
     "enhancement:dragonite_ore"
   ]
 }

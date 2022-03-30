@@ -1,0 +1,6 @@
+{
+  "parent": "enhancement:item/dragonite_bow",
+  "textures": {
+    "layer0": "enhancement:item/dragonite_bow_pulling_0"
+  }
+}

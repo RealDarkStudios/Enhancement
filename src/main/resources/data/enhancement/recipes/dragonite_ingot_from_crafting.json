@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "enhancement:dragonite_ingot",
+  "pattern": [
+    "dnd",
+    "ncn",
+    "dnd"
+  ],
+  "key": {
+    "d": {
+      "item": "enhancement:dragonite_dust"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "c": {
+      "item": "enhancement:netherite_core"
+    }
+  },
+  "result": {
+    "item": "enhancement:dragonite_ingot",
+    "count": 2
+  }
+}

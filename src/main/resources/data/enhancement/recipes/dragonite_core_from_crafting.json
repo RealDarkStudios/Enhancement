@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "enhancement:dragonite_core",
+  "pattern": [
+    "dpd",
+    "ici",
+    "dpd"
+  ],
+  "key": {
+    "i": {
+      "item": "enhancement:dragonite_ingot"
+    },
+    "d": {
+      "item": "enhancement:dragonite_stick"
+    },
+    "c": {
+      "item": "enhancement:netherite_core"
+    },
+    "p": {
+      "item": "enhancement:advanced_dragonite_plate"
+    }
+  },
+  "result": {
+    "item": "enhancement:dragonite_core",
+    "count": 1
+  }
+}

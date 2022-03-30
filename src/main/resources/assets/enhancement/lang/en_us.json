@@ -1,13 +1,18 @@
 {
   "itemGroup.enhancement.dragonite_age": "Dragonite Age",
+  "itemGroup.enhancement.combat_and_tools": "Combat and Tools",
+  "itemGroup.enhancement.misc": "Miscellaneous",
+  "itemGroup.enhancement.blocks": "Enhancement Blocks",
 
   "item.enhancement.dragonite_ingot": "Dragonite Ingot",
   "item.enhancement.dragonite_duststu ": "Dragonite Dust",
 
   "block.enhancement.dragonite_block": "Dragonite Block",
+  "block.enhancement.hardened_dragonite_block": "Hardened Dragonite Block",
   "block.enhancement.dragonite_ore": "Dragonite Ore",
 
   "item.enhancement.dragonite_axe": "Dragonite Axe",
+  "item.enhancement.dragonite_bow": "Dragonite Bow",
   "item.enhancement.dragonite_hoe": "Dragonite Hoe",
   "item.enhancement.dragonite_pickaxe": "Dragonite Pickaxe",
   "item.enhancement.dragonite_shovel": "Dragonite Shovel",
@@ -16,5 +21,50 @@
   "item.enhancement.dragonite_helmet": "Dragonite Helmet",
   "item.enhancement.dragonite_chestplate": "Dragonite Chestplate",
   "item.enhancement.dragonite_leggings": "Dragonite Leggings",
-  "item.enhancement.dragonite_boots": "Dragonite Boots"
+  "item.enhancement.dragonite_boots": "Dragonite Boots",
+
+  "item.enhancement.wooden_core": "Wooden Core",
+  "item.enhancement.stone_core": "Stone Core",
+  "item.enhancement.iron_core": "Iron Core",
+  "item.enhancement.diamond_core": "Diamond Core",
+  "item.enhancement.netherite_core": "Netherite Core",
+  "item.enhancement.dragonite_core": "Dragonite Core",
+
+  "item.enhancement.stone_stick": "Stone Stick",
+  "item.enhancement.iron_stick": "Iron Stick",
+  "item.enhancement.diamond_stick": "Diamond Stick",
+  "item.enhancement.netherite_stick": "Netherite Stick",
+  "item.enhancement.dragonite_stick": "Dragonite Stick",
+
+  "item.enhancement.iron_plate": "Iron Plate",
+  "item.enhancement.diamond_plate": "Diamond Plate",
+  "item.enhancement.netherite_plate": "Netherite Plate",
+  "item.enhancement.dragonite_plate": "Dragonite Plate",
+
+  "item.enhancement.advanced_netherite_plate": "Advanced Netherite Plate",
+  "item.enhancement.advanced_dragonite_plate": "Advanced Dragonite Plate",
+
+  "tooltip.enhancement.util.shift_info": "Press §e§lSHIFT§r for more info.",
+
+  "tooltip.enhancement.base_tier_core_description": "A %s Tier Core.",
+  "tooltip.enhancement.base_core_info": "%s is used to make %s",
+
+  "tooltip.enhancement.netherite_core_extra_info": "§6§lNetherite Core§r is mainly used to craft:",
+  "tooltip.enhancement.netherite_core_main_crafting_use": "- §b§lDragonite Ingots§r",
+  "tooltip.enhancement.dragonite_core_info": "§6§lDragonite Core§r is the highest tier core.",
+  "tooltip.enhancement.dragonite_core_extra_info":"§6§lDragonite Core§r is mainly used to craft:",
+  "tooltip.enhancement.dragonite_core_main_crafting_use": "- §b§lDragonite Armor and Tools§r",
+
+  "block.enhancement.redwood_log": "Redwood Log",
+  "block.enhancement.redwood_wood": "Redwood Wood",
+  "block.enhancement.redwood_planks": "Redwood Planks",
+  "block.enhancement.stripped_redwood_log": "Stripped Redwood Log",
+  "block.enhancement.stripped_redwood_wood": "Stripped Redwood Wood",
+  "block.enhancement.redwood_leaves": "Redwood Leaves",
+  "block.enhancement.redwood_sapling": "Redwood Sapling",
+
+  "item.enhancement.healing_rune": "Healing Rune",
+  "stat.enhancement.healing_rune_used": "Enhancement: Healing Rune Used",
+  "item.enhancement.air_rune": "Air Rune",
+  "stat.enhancement.air_rune_used": "Enhancement: Air Rune Used"
 }

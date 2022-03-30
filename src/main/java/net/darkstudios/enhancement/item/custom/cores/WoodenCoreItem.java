@@ -1,0 +1,30 @@
+package net.darkstudios.enhancement.item.custom.cores;
+
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+
+public class WoodenCoreItem extends Item {
+    public WoodenCoreItem(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if (!Screen.hasShiftDown()) {
+            tooltip.add(new TranslatableText("tooltip.enhancement.base_tier_core_description", "§6§lWooden Core§r"));
+            tooltip.add(new TranslatableText("tooltip.enhancement.util.shift_info"));
+        } else {
+            tooltip.add(new TranslatableText("tooltip.enhancement.base_core_info", "§6§lWooden Core§r", "§6§lStone Core§r"));
+        }
+
+        super.appendTooltip(stack, world, tooltip, context);
+    }
+}
