@@ -4,6 +4,7 @@ import net.darkstudios.enhancement.EnhancementMod;
 import net.darkstudios.enhancement.block.ModBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
@@ -18,10 +19,10 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> REDWOOD_TREE =
         ConfiguredFeatures.register("redwood_tree", Feature.TREE, new TreeFeatureConfig.Builder(
             BlockStateProvider.of(ModBlocks.REDWOOD_LOG),
-            new GiantTrunkPlacer(10, 6, 10),
+            new GiantTrunkPlacer(13, 2, 14),
             BlockStateProvider.of(ModBlocks.REDWOOD_LEAVES),
-            new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
-            new TwoLayersFeatureSize(2, 0, 2)).ignoreVines().build());
+            new SpruceFoliagePlacer(ConstantIntProvider.create(10), ConstantIntProvider.create(0), UniformIntProvider.create(10, 17)),
+            new TwoLayersFeatureSize(1, 1, 2)).ignoreVines().build());
 
     public static final RegistryEntry<PlacedFeature> REDWOOD_CHECKED =
             PlacedFeatures.register("redwood_checked", REDWOOD_TREE,
@@ -36,7 +37,7 @@ public class ModConfiguredFeatures {
     );
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> DRAGONITE_ORE = ConfiguredFeatures.register("dragonite_ore",
-            Feature.ORE, new OreFeatureConfig(END_DRAGONITE_ORES, 2));
+            Feature.ORE, new OreFeatureConfig(END_DRAGONITE_ORES, 3));
 
     public static void registerConfiguredFeatures() {
         EnhancementMod.LOGGER.info("Registering Mod Configured Features for: " + EnhancementMod.MOD_DISPLAY_NAME);

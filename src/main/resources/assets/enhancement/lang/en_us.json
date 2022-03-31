@@ -5,7 +5,8 @@
   "itemGroup.enhancement.blocks": "Enhancement Blocks",
 
   "item.enhancement.dragonite_ingot": "Dragonite Ingot",
-  "item.enhancement.dragonite_duststu ": "Dragonite Dust",
+  "item.enhancement.dragonite_dust": "Dragonite Dust",
+  "item.enhancement.dragonite_nugget": "Dragonite Nugget",
 
   "block.enhancement.dragonite_block": "Dragonite Block",
   "block.enhancement.hardened_dragonite_block": "Hardened Dragonite Block",
@@ -62,6 +63,14 @@
   "block.enhancement.stripped_redwood_wood": "Stripped Redwood Wood",
   "block.enhancement.redwood_leaves": "Redwood Leaves",
   "block.enhancement.redwood_sapling": "Redwood Sapling",
+  "block.enhancement.redwood_slab": "Redwood Slab",
+  "block.enhancement.redwood_stairs": "Redwood Stairs",
+  "block.enhancement.redwood_fence": "Redwood Fence",
+  "block.enhancement.redwood_fence_gate": "Redwood Fence Gate",
+  "block.enhancement.redwood_button": "Redwood Button",
+  "block.enhancement.redwood_pressure_plate": "Redwood Pressure Plate",
+  "block.enhancement.redwood_door": "Redwood Door",
+  "block.enhancement.redwood_trapdoor": "Redwood Trapdoor",
 
   "item.enhancement.healing_rune": "Healing Rune",
   "stat.enhancement.healing_rune_used": "Enhancement: Healing Rune Used",

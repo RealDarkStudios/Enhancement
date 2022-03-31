@@ -7,6 +7,7 @@ import net.darkstudios.enhancement.util.ModStatistics;
 import net.darkstudios.enhancement.world.feature.ModConfiguredFeatures;
 import net.darkstudios.enhancement.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.world.biome.Biome;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,7 +31,5 @@ public class EnhancementMod implements ModInitializer {
 
 		ModWorldGen.generateModWorldGen();
 		ModStatistics.registerModStats();
-
-		ModWorldGen.generateModWorldGen();
 	}
 }
