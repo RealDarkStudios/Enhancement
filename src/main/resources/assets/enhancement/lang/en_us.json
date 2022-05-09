@@ -4,9 +4,13 @@
   "itemGroup.enhancement.misc": "Miscellaneous",
   "itemGroup.enhancement.blocks": "Enhancement Blocks",
 
+  "item.enhancement.red_grapes": "Red Grapes",
+  "item.enhancement.grapes": "Grapes",
+
   "item.enhancement.dragonite_ingot": "Dragonite Ingot",
   "item.enhancement.dragonite_dust": "Dragonite Dust",
   "item.enhancement.dragonite_nugget": "Dragonite Nugget",
+  "item.enhancement.dragonite_coal": "Dragonite Coal",
 
   "block.enhancement.dragonite_block": "Dragonite Block",
   "block.enhancement.hardened_dragonite_block": "Hardened Dragonite Block",
@@ -18,6 +22,7 @@
   "item.enhancement.dragonite_pickaxe": "Dragonite Pickaxe",
   "item.enhancement.dragonite_shovel": "Dragonite Shovel",
   "item.enhancement.dragonite_sword": "Dragonite Sword",
+  "item.enhancement.dragonite_paxel": "Dragonite Paxel",
 
   "item.enhancement.dragonite_helmet": "Dragonite Helmet",
   "item.enhancement.dragonite_chestplate": "Dragonite Chestplate",
@@ -71,9 +76,28 @@
   "block.enhancement.redwood_pressure_plate": "Redwood Pressure Plate",
   "block.enhancement.redwood_door": "Redwood Door",
   "block.enhancement.redwood_trapdoor": "Redwood Trapdoor",
+  "block.enhancement.redwood_sign": "Redwood Sign",
 
   "item.enhancement.healing_rune": "Healing Rune",
   "stat.enhancement.healing_rune_used": "Enhancement: Healing Rune Used",
   "item.enhancement.air_rune": "Air Rune",
-  "stat.enhancement.air_rune_used": "Enhancement: Air Rune Used"
+  "stat.enhancement.air_rune_used": "Enhancement: Air Rune Used",
+
+  "item.enhancement.wooden_paxel": "Wooden Paxel",
+  "item.enhancement.gold_paxel": "Gold Paxel",
+  "item.enhancement.stone_paxel": "Stone Paxel",
+  "item.enhancement.iron_paxel": "Iron Paxel",
+  "item.enhancement.diamond_paxel": "Diamond Paxel",
+  "item.enhancement.netherite_paxel": "Netherite Paxel",
+
+  "item.enhancement.oil_bucket": "Oil Bucket",
+
+  "effect.enhancement.freeze": "Freeze",
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+  "item.enhancement.dragonite_staff": "Dragonite Staff",
+  "block.enhancement.dragonite_blaster": "Dragonite Blaster",
+  "blockEntity.enhancement.dragonite_blaster": "Dragonite Blaster"
 }

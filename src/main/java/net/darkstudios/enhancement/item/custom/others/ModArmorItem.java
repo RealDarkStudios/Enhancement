@@ -1,10 +1,10 @@
 package net.darkstudios.enhancement.item.custom.others;
 
 import com.google.common.collect.ImmutableMap;
+import net.darkstudios.enhancement.EnhancementMod;
 import net.darkstudios.enhancement.item.ModArmorMaterial;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,26 +13,17 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import java.lang.reflect.Array;
 import java.util.Map;
+import java.util.Set;
 
 public class ModArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP = new ImmutableMap.Builder<ArmorMaterial, StatusEffect>()
-            .put(ModArmorMaterial.DRAGONITE, StatusEffects.STRENGTH)
+    private static final Map<ArmorMaterial, Set> MATERIAL_TO_EFFECT_MAP = (new ImmutableMap.Builder<ArmorMaterial, Set>())
+            .put(ModArmorMaterial.DRAGONITE, Set.of(new StatusEffectInstance(StatusEffects.STRENGTH, 200, 0)))
             .build();
 
-    private static int configAmplifyValue;
-
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, int configAmplifyValue, Settings settings) {
+    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
-        setAmplifier(configAmplifyValue);
-    }
-
-    public static int getAmplifier() {
-        return configAmplifyValue;
-    }
-
-    public static void setAmplifier(int configAmplifyValue) {
-        ModArmorItem.configAmplifyValue = configAmplifyValue;
     }
 
     @Override
@@ -41,54 +32,59 @@ public class ModArmorItem extends ArmorItem {
             if(entity instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity)entity;
 
-                if(hasFullSuitOfArmorOn(player)) {
+                if (hasFullSuitOfArmorOn(player)) {
                     evaluateArmorEffects(player);
                 }
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-
     private void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffect> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+        for (Map.Entry<ArmorMaterial, Set> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
-            StatusEffect mapStatusEffect = entry.getValue();
+            Set<StatusEffectInstance> mapStatusEffectSet = entry.getValue();
 
-            if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+            if (hasCorrectArmorOn(mapArmorMaterial, player)) {
+                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffectSet);
             }
         }
     }
 
-    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
+    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, Set<StatusEffectInstance> mapStatusEffectSet) {
+        StatusEffectInstance[] mapStatusEffectArray = mapStatusEffectSet.toArray(new StatusEffectInstance[0]);
 
-        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 100, configAmplifyValue, true, false));
+        if (hasCorrectArmorOn(mapArmorMaterial, player)) {
 
-            /*if(new Random().nextFloat() > 0.99f) { // 40% of damaging the armor! Possibly!
-                player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            }*/
+            for (int i = 0; i < mapStatusEffectArray.length; i++) {
+                if (!player.hasStatusEffect(mapStatusEffectArray[i].getEffectType())) {
+                    player.addStatusEffect(mapStatusEffectArray[i]);
+                }
+            }
         }
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
         ItemStack boots = player.getInventory().getArmorStack(0);
         ItemStack leggings = player.getInventory().getArmorStack(1);
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
+        ItemStack chestplate = player.getInventory().getArmorStack(2);
         ItemStack helmet = player.getInventory().getArmorStack(3);
 
-        return !helmet.isEmpty() && !breastplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty();
+        return !helmet.isEmpty() && !chestplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        try {
+            ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
+            ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
+            ArmorItem chestplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
+            ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
 
-        return helmet.getMaterial() == material && breastplate.getMaterial() == material && leggings.getMaterial() == material && boots.getMaterial() == material;
+            return helmet.getMaterial() == material && chestplate.getMaterial() == material && leggings.getMaterial() == material && boots.getMaterial() == material;
+        }
+        catch (Exception e) {
+            EnhancementMod.LOGGER.warn("Some slot is invalid or does not have a material!");
+            return false;
+        }
     }
 }

@@ -13,6 +13,7 @@ public class ModTags {
 
         public static final TagKey<Block> DRAGONITE_BLOCKS = createCommonTag("dragonite_blocks");
         public static final TagKey<Block> ORES = createCommonTag("ores");
+        public static final TagKey<Block> PAXEL_MINABLE = createTag("mineable/paxel");
 
         //Add Block Tag
         private static TagKey<Block> createTag(String name) {

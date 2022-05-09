@@ -4,6 +4,9 @@
   "package": "net.darkstudios.enhancement.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin",
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
     "EnhancementMixin"
