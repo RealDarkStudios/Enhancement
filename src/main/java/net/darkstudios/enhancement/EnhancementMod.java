@@ -15,6 +15,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.world.biome.Biome;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 public class EnhancementMod implements ModInitializer {
 
@@ -44,5 +45,7 @@ public class EnhancementMod implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandler.registerScreenHandlers();
+
+		GeckoLib.initialize();
 	}
 }
