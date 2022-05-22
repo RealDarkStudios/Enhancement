@@ -3,8 +3,11 @@ package net.darkstudios.enhancement.registries;
 import net.darkstudios.enhancement.EnhancementMod;
 import net.darkstudios.enhancement.block.ModBlocks;
 import net.darkstudios.enhancement.command.EnhancementTopLevelCommand;
+import net.darkstudios.enhancement.entity.ModEntities;
+import net.darkstudios.enhancement.entity.custom.PiglinHunterEntity;
 import net.darkstudios.enhancement.item.ModItems;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -17,6 +20,7 @@ public class ModRegistries {
         registerCommands();
         registerFlammableBlocks();
         registerFuels();
+        registerEntityAttributes();
     }
 
     //Register Strippable Blocks
@@ -49,5 +53,9 @@ public class ModRegistries {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
         registry.add(ModItems.DRAGONITE_COAL, 6400);
+    }
+
+    private static void registerEntityAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.PIGLIN_HUNTER, PiglinHunterEntity.setAttibutes());
     }
 }

@@ -1,4 +1,4 @@
-package net.darkstudios.enhancement.entities;
+package net.darkstudios.enhancement.entity;
 
 import net.darkstudios.enhancement.mixin.SignTypeAccessor;
 import net.minecraft.util.SignType;

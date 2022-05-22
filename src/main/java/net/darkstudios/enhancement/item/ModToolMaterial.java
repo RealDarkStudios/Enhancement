@@ -9,7 +9,8 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    DRAGONITE(5, 3500, 12.0F, 6.0F, 18, () -> Ingredient.ofItems(ModItems.DRAGONITE_INGOT));
+    DRAGONITE(5, 3500, 12.0F, 6.0F, 18, () -> Ingredient.ofItems(ModItems.DRAGONITE_INGOT)),
+    TIN(2, 200, 6.5F, 2.5F, 15, () -> Ingredient.ofItems(ModItems.TIN_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

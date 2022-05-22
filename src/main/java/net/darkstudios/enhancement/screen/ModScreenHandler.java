@@ -9,6 +9,6 @@ public class ModScreenHandler {
     public static ScreenHandlerType<DragoniteBlasterScreenHandler> DRAGONITE_BLASTER_SCREEN_HANDLER;
 
     public static void registerScreenHandlers() {
-        ScreenHandlerRegistry.registerSimple(new Identifier(EnhancementMod.MOD_ID, "dragonite_blaster"), DragoniteBlasterScreenHandler::new);
+        DRAGONITE_BLASTER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(EnhancementMod.MOD_ID, "dragonite_blaster"), DragoniteBlasterScreenHandler::new);
     }
 }

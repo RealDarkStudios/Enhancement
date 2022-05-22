@@ -7,21 +7,25 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ArrayPropertyDelegate;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
 public class DragoniteBlasterScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private final PropertyDelegate delegate;
 
     public DragoniteBlasterScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(4));
+        this(syncId, playerInventory, new SimpleInventory(4), new ArrayPropertyDelegate(4));
     }
 
-    public DragoniteBlasterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+    public DragoniteBlasterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandler.DRAGONITE_BLASTER_SCREEN_HANDLER, syncId);
         checkSize(inventory, 4);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
+        this.delegate = delegate;
 
         this.addSlot(new ModFuelSlot(inventory, 0, 18, 50));
         this.addSlot(new Slot(inventory, 1, 66, 16));
@@ -30,6 +34,8 @@ public class DragoniteBlasterScreenHandler extends ScreenHandler {
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
+
+        addProperties(delegate);
     }
 
     @Override
@@ -74,5 +80,29 @@ public class DragoniteBlasterScreenHandler extends ScreenHandler {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
+    }
+
+    public boolean isCrafting() {
+        return delegate.get(0) > 0;
+    }
+
+    public boolean hasFuel() {
+        return delegate.get(2) > 0;
+    }
+
+    public int getScaledProgress() {
+        int progress = this.delegate.get(0);
+        int maxProgress = this.delegate.get(1);
+        int progressArrowSize = 26;
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledFuelProgress() {
+        int fuelProgress = this.delegate.get(2);
+        int maxFuelProgress = this.delegate.get(3);
+        int fuelProgressSize = 14;
+
+        return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
     }
 }

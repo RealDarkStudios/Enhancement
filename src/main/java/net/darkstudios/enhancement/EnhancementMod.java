@@ -3,9 +3,11 @@ package net.darkstudios.enhancement;
 import net.darkstudios.enhancement.block.ModBlocks;
 import net.darkstudios.enhancement.block.entity.ModBlockEntities;
 import net.darkstudios.enhancement.effect.ModEffects;
+import net.darkstudios.enhancement.enchantment.ModEnchantments;
 import net.darkstudios.enhancement.item.ModItems;
 import net.darkstudios.enhancement.particle.ModParticles;
 import net.darkstudios.enhancement.potion.ModPotions;
+import net.darkstudios.enhancement.recipe.ModRecipes;
 import net.darkstudios.enhancement.registries.ModRegistries;
 import net.darkstudios.enhancement.screen.ModScreenHandler;
 import net.darkstudios.enhancement.util.ModStatistics;
@@ -45,6 +47,9 @@ public class EnhancementMod implements ModInitializer {
 
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandler.registerScreenHandlers();
+		ModRecipes.registerRecipes();
+
+		ModEnchantments.registerModEnchantments();
 
 		GeckoLib.initialize();
 	}

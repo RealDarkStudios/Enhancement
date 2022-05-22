@@ -1,0 +1,122 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.enhancement.piglin_hunter.idle": {
+			"loop": true,
+			"bones": {
+				"arm_left": {
+					"rotation": [0, 0, "math.sin(query.anim_time*75)*-3"]
+				},
+				"arm_right": {
+					"rotation": [0, 0, "math.sin(query.anim_time*75)*3"]
+				}
+			}
+		},
+		"animation.enhancement.piglin_hunter.walk": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"legs": {
+					"rotation": [360, 0, 0]
+				},
+				"leg_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"r_pants": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [25, 0, 0]
+					}
+				},
+				"armorRightArm": {
+					"rotation": [-25, 0, 0]
+				},
+				"bipedLeftArm": {
+					"rotation": [0, 0, 0]
+				},
+				"armorLeftArm": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.enhancement.piglin_hunter.attack": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"legs": {
+					"rotation": [360, 0, 0]
+				},
+				"leg_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [50, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-50, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": [-25, 0, 0]
+				},
+				"r_pants": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [25, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

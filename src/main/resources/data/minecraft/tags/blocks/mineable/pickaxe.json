@@ -3,6 +3,8 @@
   "values": [
     "enhancement:dragonite_block",
     "enhancement:hardened_dragonite_block",
-    "enhancement:dragonite_ore"
+    "enhancement:dragonite_ore",
+    "enhancement:tin_ore",
+    "enhancement:tin_block"
   ]
 }

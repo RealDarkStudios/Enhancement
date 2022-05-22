@@ -18,4 +18,8 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> DRAGONITE_ORE_PLACED = PlacedFeatures.register("dragonite_ore_placed",
             ModConfiguredFeatures.DRAGONITE_ORE, ModOreFeatures.modifiersWithCount(2,
                     HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
+
+    public static final RegistryEntry<PlacedFeature> TIN_ORE_PLACED = PlacedFeatures.register("tin_ore_placed",
+           ModConfiguredFeatures.TIN_ORE, ModOreFeatures.modifiersWithCount(7,
+                   HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(144))));
 }

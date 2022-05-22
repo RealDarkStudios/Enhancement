@@ -7,6 +7,25 @@
   "item.enhancement.red_grapes": "Red Grapes",
   "item.enhancement.grapes": "Grapes",
 
+  "item.enhancement.tin_ingot": "Tin Ingot",
+  "item.enhancement.tin_nugget": "Tin Nugget",
+
+  "block.enhancement.tin_block": "Tin Block",
+  "block.enhancement.tin_ore": "Tin Ore",
+  "block.enhancement.deepslate_tin_ore": "Deepslate Tin Ore",
+
+  "item.enhancement.tin_axe": "Tin Axe",
+  "item.enhancement.tin_hoe": "Tin Hoe",
+  "item.enhancement.tin_pickaxe": "Tin Pickaxe",
+  "item.enhancement.tin_shovel": "Tin Shovel",
+  "item.enhancement.tin_sword": "Tin Sword",
+  "item.enhancement.tin_paxel": "Tin Paxel",
+
+  "item.enhancement.tin_helmet": "Tin Helmet",
+  "item.enhancement.tin_chestplate": "Tin Chestplate",
+  "item.enhancement.tin_leggings": "Tin Leggings",
+  "item.enhancement.tin_boots": "Tin Boots",
+
   "item.enhancement.dragonite_ingot": "Dragonite Ingot",
   "item.enhancement.dragonite_dust": "Dragonite Dust",
   "item.enhancement.dragonite_nugget": "Dragonite Nugget",
@@ -99,5 +118,8 @@
 
   "item.enhancement.dragonite_staff": "Dragonite Staff",
   "block.enhancement.dragonite_blaster": "Dragonite Blaster",
-  "blockEntity.enhancement.dragonite_blaster": "Dragonite Blaster"
+  "blockEntity.enhancement.dragonite_blaster": "Dragonite Blaster",
+  "item.enhancement.piglin_hunter_spawn_egg": "Piglin Hunter Spawn Egg",
+
+  "enchantment.enhancement.dragon_tipped": "Dragon Tipped"
 }

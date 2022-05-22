@@ -3,18 +3,15 @@ package net.darkstudios.enhancement.block;
 import net.darkstudios.enhancement.EnhancementMod;
 import net.darkstudios.enhancement.block.custom.DragoniteBlasterBlock;
 import net.darkstudios.enhancement.block.custom.blocktypes.*;
-import net.darkstudios.enhancement.entities.ModSignTypes;
+import net.darkstudios.enhancement.entity.ModSignTypes;
 import net.darkstudios.enhancement.fluid.ModFluids;
 import net.darkstudios.enhancement.item.ModItemGroups;
-import net.darkstudios.enhancement.item.ModItems;
 import net.darkstudios.enhancement.world.feature.tree.RedwoodSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
@@ -26,10 +23,21 @@ import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
+    //Tin
+    public static final Block TIN_BLOCK = registerBlock("tin_block", new Block(FabricBlockSettings.of(Material.METAL).strength(5F, 6F).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.METAL).requiresTool()), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.COMMON));
+    public static final Block TIN_ORE = registerBlock("tin_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3F, 3F).mapColor(MapColor.STONE_GRAY).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.COMMON));
+    public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3F, 3F).mapColor(MapColor.STONE_GRAY).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.COMMON));
+
+    //Blenderite -- Requested by idot daniel
+    public static final Block BLENDERITE_BLOCK = registerBlock("blender_block", new Block(FabricBlockSettings.of(Material.METAL).strength(15F, 18F).mapColor(MapColor.LIGHT_GRAY).sounds(BlockSoundGroup.METAL).requiresTool()), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.UNCOMMON));
+    public static final Block BLENDERITE_ORE = registerBlock("blenderite_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(9F, 9F).mapColor(MapColor.STONE_GRAY).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.UNCOMMON));
+    public static final Block DEEPSLATE_BLENDERITE_ORE = registerBlock("deepslate_blenderite_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(9F, 9F).mapColor(MapColor.STONE_GRAY).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.BLOCKS).rarity(Rarity.UNCOMMON));
+    public static final Block BLENDERITE_STATUE = registerBlock("blenderite_statue", new Block(FabricBlockSettings.of(Material.STONE).strength(12F, 15F).mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.METAL).requiresTool()), new FabricItemSettings().group(ModItemGroups.DECO).rarity(Rarity.UNCOMMON));
+
     //Dragonite
-    public static final Block DRAGONITE_BLOCK = registerBlock("dragonite_block", new Block(FabricBlockSettings.of(Material.METAL).strength(70F, 1400F).mapColor(MapColor.TERRACOTTA_BLACK).sounds(BlockSoundGroup.NETHERITE).requiresTool()), new FabricItemSettings().group(ModItemGroups.DRAGONITE_AGE).fireproof().rarity(Rarity.RARE));
-    public static final Block DRAGONITE_ORE = registerBlock("dragonite_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(30F, 500F).mapColor(MapColor.PALE_YELLOW).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.DRAGONITE_AGE).fireproof().rarity(Rarity.RARE));
-    public static final Block HARDENED_DRAGONITE_BLOCK = registerBlock("hardened_dragonite_block", new Block(FabricBlockSettings.of(Material.STONE).strength(100F, 1750F).mapColor(MapColor.TERRACOTTA_BLACK).sounds(BlockSoundGroup.NETHERITE).requiresTool()), new FabricItemSettings().group(ModItemGroups.DRAGONITE_AGE).fireproof().rarity(Rarity.RARE));
+    public static final Block DRAGONITE_BLOCK = registerBlock("dragonite_block", new Block(FabricBlockSettings.of(Material.METAL).strength(70F, 1400F).mapColor(MapColor.TERRACOTTA_BLACK).sounds(BlockSoundGroup.NETHERITE).requiresTool()), new FabricItemSettings().group(ModItemGroups.BLOCKS).fireproof().rarity(Rarity.RARE));
+    public static final Block DRAGONITE_ORE = registerBlock("dragonite_ore", new OreBlock(FabricBlockSettings.of(Material.STONE).strength(30F, 500F).mapColor(MapColor.PALE_YELLOW).sounds(BlockSoundGroup.STONE).requiresTool(), UniformIntProvider.create(5, 9)), new FabricItemSettings().group(ModItemGroups.BLOCKS).fireproof().rarity(Rarity.RARE));
+    public static final Block HARDENED_DRAGONITE_BLOCK = registerBlock("hardened_dragonite_block", new Block(FabricBlockSettings.of(Material.STONE).strength(100F, 1750F).mapColor(MapColor.TERRACOTTA_BLACK).sounds(BlockSoundGroup.NETHERITE).requiresTool()), new FabricItemSettings().group(ModItemGroups.BLOCKS).fireproof().rarity(Rarity.RARE));
 
     //Redwood
     public static final Block REDWOOD_LOG = registerBlock("redwood_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.BLOCKS));
@@ -53,9 +61,8 @@ public class ModBlocks {
 //Fluids
     public static final Block OIL_FLUID_BLOCK = registerBlockWithoutBlockItem("oil_fluid_block", new ModFluidBlock(ModFluids.OIL_STILL, FabricBlockSettings.copy(Blocks.WATER).noCollision().nonOpaque().dropsNothing()));
 
-
 //Block Entities
-    public static final Block DRAGONITE_BLASTER = registerBlock("dragonite_blaster", new DragoniteBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(70F, 1400F).mapColor(MapColor.TERRACOTTA_BLACK).requiresTool().nonOpaque().luminance(createLightLevelFromLitBlockState(13))), new FabricItemSettings().group(ModItemGroups.DRAGONITE_AGE).fireproof().rarity(Rarity.RARE));
+    public static final Block DRAGONITE_BLASTER = registerBlock("dragonite_blaster", new DragoniteBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(70F, 1400F).mapColor(MapColor.TERRACOTTA_BLACK).requiresTool().nonOpaque().luminance(createLightLevelFromLitBlockState(13))), new FabricItemSettings().group(ModItemGroups.BLOCKS).fireproof().rarity(Rarity.RARE));
 
     //Add light to a block if the lit property is true!
     private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {

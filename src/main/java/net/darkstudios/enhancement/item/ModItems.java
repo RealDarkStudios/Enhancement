@@ -2,6 +2,7 @@ package net.darkstudios.enhancement.item;
 
 import net.darkstudios.enhancement.EnhancementMod;
 import net.darkstudios.enhancement.block.ModBlocks;
+import net.darkstudios.enhancement.entity.ModEntities;
 import net.darkstudios.enhancement.fluid.ModFluids;
 import net.darkstudios.enhancement.item.custom.cores.*;
 import net.darkstudios.enhancement.item.custom.others.*;
@@ -28,11 +29,30 @@ public class ModItems {
     public static final Item DIAMOND_PAXEL = registerItem("diamond_paxel", new ModPaxelItem(ToolMaterials.DIAMOND, 1f, 1f, new FabricItemSettings().rarity(Rarity.COMMON).group(ItemGroup.TOOLS)));
     public static final Item NETHERITE_PAXEL = registerItem("netherite_paxel", new ModPaxelItem(ToolMaterials.NETHERITE, 1f, 1f, new FabricItemSettings().rarity(Rarity.COMMON).group(ItemGroup.TOOLS).fireproof()));
 
+//Tin
+    //Materials
+    public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.ITEMS)));
+    public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.ITEMS)));
+
+    //Tools
+    public static final Item TIN_SWORD = registerItem("tin_sword", new SwordItem(ModToolMaterial.TIN, 3, -2.4F, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_PICKAXE = registerItem("tin_pickaxe", new ModPickaxeItem(ModToolMaterial.TIN, 1, -2.8F, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_AXE = registerItem("tin_axe", new ModAxeItem(ModToolMaterial.TIN, 6.0F, -3.1F, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_SHOVEL = registerItem("tin_shovel", new ShovelItem(ModToolMaterial.TIN, 1.5F, -3.0F, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_HOE = registerItem("tin_hoe", new ModHoeItem(ModToolMaterial.TIN, -2, -1.0F, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_PAXEK = registerItem("tin_paxel", new ModPaxelItem(ModToolMaterial.TIN, 1f, 1f, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+
+    //Armor
+    public static final Item TIN_HELMET = registerItem("tin_helmet", new ModArmorItem(ModArmorMaterial.TIN, EquipmentSlot.HEAD, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_CHESTPLATE = registerItem("tin_chestplate", new ArmorItem(ModArmorMaterial.TIN, EquipmentSlot.CHEST, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_LEGGINGS = registerItem("tin_leggings", new ArmorItem(ModArmorMaterial.TIN, EquipmentSlot.LEGS, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item TIN_BOOTS = registerItem("tin_boots", new ArmorItem(ModArmorMaterial.TIN, EquipmentSlot.FEET, new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroups.COMBAT_AND_TOOLS)));
+
 //Dragonite
     //Materials
-    public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.DRAGONITE_AGE)));
-    public static final Item DRAGONITE_NUGGET = registerItem("dragonite_nugget", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.DRAGONITE_AGE)));
-    public static final Item DRAGONITE_DUST = registerItem("dragonite_dust", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.DRAGONITE_AGE)));
+    public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.ITEMS)));
+    public static final Item DRAGONITE_NUGGET = registerItem("dragonite_nugget", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.ITEMS)));
+    public static final Item DRAGONITE_DUST = registerItem("dragonite_dust", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.ITEMS)));
     public static final Item DRAGONITE_COAL = registerItem("dragonite_coal", new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.MISC)));
 
     //Dragonite Tools
@@ -45,10 +65,10 @@ public class ModItems {
     public static final Item DRAGONITE_PAXEL = registerItem("dragonite_paxel", new ModPaxelItem(ModToolMaterial.DRAGONITE, 1f, 1f, new FabricItemSettings().rarity(Rarity.RARE).group(ModItemGroups.COMBAT_AND_TOOLS).fireproof()));
 
     //Dragonite Armor
-    public static final Item DRAGONITE_HELMET = registerItem("dragonite_helmet", new ModArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.HEAD, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
-    public static final Item DRAGONITE_CHESTPLATE = registerItem("dragonite_chestplate", new ArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.CHEST, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
-    public static final Item DRAGONITE_LEGGINGS = registerItem("dragonite_leggings", new ArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.LEGS, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
-    public static final Item DRAGONITE_BOOTS = registerItem("dragonite_boots", new ArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.FEET, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item DRAGONITE_HELMET = registerItem("dragonite_helmet", new DragoniteArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.HEAD, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item DRAGONITE_CHESTPLATE = registerItem("dragonite_chestplate", new DragoniteArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.CHEST, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item DRAGONITE_LEGGINGS = registerItem("dragonite_leggings", new DragoniteArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.LEGS, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
+    public static final Item DRAGONITE_BOOTS = registerItem("dragonite_boots", new DragoniteArmorItem(ModArmorMaterial.DRAGONITE, EquipmentSlot.FEET, new FabricItemSettings().rarity(Rarity.RARE).fireproof().group(ModItemGroups.COMBAT_AND_TOOLS)));
 
 //Misc
     //Sticks
@@ -89,6 +109,9 @@ public class ModItems {
 
 //Fluids
     public static final Item OIL_BUCKET = registerItem("oil_bucket", new BucketItem(ModFluids.OIL_STILL, new FabricItemSettings().group(ModItemGroups.MISC).rarity(Rarity.COMMON).maxCount(1)));
+
+//SpawnEggs
+    public static final Item PIGLIN_HUNTER_SPAWN_EGG = registerItem("piglin_hunter_spawn_egg", new SpawnEggItem(ModEntities.PIGLIN_HUNTER, 0xFFFFFF, 0xFFFFFF, new FabricItemSettings().group(ItemGroup.MISC).rarity(Rarity.COMMON)));
 
     //Register Item to the Minecraft Registry, so that it exists!
     private static Item registerItem(String name, Item item) {

@@ -74,17 +74,17 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        try {
-            ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-            ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-            ArmorItem chestplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
-            ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        for (ItemStack armorStack: player.getInventory().armor) {
+            if(!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+        }
 
-            return helmet.getMaterial() == material && chestplate.getMaterial() == material && leggings.getMaterial() == material && boots.getMaterial() == material;
-        }
-        catch (Exception e) {
-            EnhancementMod.LOGGER.warn("Some slot is invalid or does not have a material!");
-            return false;
-        }
+        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
+        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
+        ArmorItem chestplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
+        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+
+        return helmet.getMaterial() == material && chestplate.getMaterial() == material && leggings.getMaterial() == material && boots.getMaterial() == material;
     }
 }

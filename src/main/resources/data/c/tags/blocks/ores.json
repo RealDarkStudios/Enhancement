@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "enhancement:dragonite_ore"
+    "enhancement:dragonite_ore",
+    "enhancement:tin_ore"
   ]
 }

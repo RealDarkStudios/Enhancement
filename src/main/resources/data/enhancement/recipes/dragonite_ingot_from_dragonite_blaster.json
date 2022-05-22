@@ -1,0 +1,14 @@
+{
+  "type": "enhancement:dragonite_blaster",
+  "ingredients": [
+    {
+      "item": "enhancement:dragonite_dust"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "output": {
+    "item": "enhancement:dragonite_ingot"
+  }
+}

@@ -32,12 +32,24 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("redwood_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(REDWOOD_CHECKED, 0.5f)), REDWOOD_CHECKED));
 
+    /*
+        ORE RELATED CONFIGURED FEATURES
+    */
+
     public static final List<OreFeatureConfig.Target> END_DRAGONITE_ORES = List.of(
             OreFeatureConfig.createTarget( new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.DRAGONITE_ORE.getDefaultState())
     );
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_TIN_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.TIN_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TIN_ORE.getDefaultState())
+    );
+
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> DRAGONITE_ORE = ConfiguredFeatures.register("dragonite_ore",
             Feature.ORE, new OreFeatureConfig(END_DRAGONITE_ORES, 3));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> TIN_ORE = ConfiguredFeatures.register("tin_ore",
+            Feature.ORE, new OreFeatureConfig(OVERWORLD_TIN_ORES, 10));
 
     public static void registerConfiguredFeatures() {
         EnhancementMod.LOGGER.info("Registering Mod Configured Features for: " + EnhancementMod.MOD_DISPLAY_NAME);
